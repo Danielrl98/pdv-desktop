@@ -1,0 +1,18 @@
+{
+    "type": "postgres",
+    "host": "postgres.railway.internal",
+    "port": 5432,
+    "username": "postgres",
+    "password": "WTcEgqSnBCayjJGnOsINARaPdWBQNHiH",
+    "database": "railway",
+    "synchronize": true,
+    "logging": false,
+    "entities": ["dist/entities/**/*.js"],
+    "migrations": ["dist/migrations/**/*.js"],
+    "subscribers": ["dist/subscribers/**/*.js"],
+    "cli": {
+      "entitiesDir": "src/infra/db/entities",
+      "migrationsDir": "src/infra/db/migrations",
+      "subscribersDir": "src/infra/db/subscribers"
+    }
+  }

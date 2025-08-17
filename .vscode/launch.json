@@ -1,0 +1,24 @@
+{
+  "configurations": [
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Debug bot",
+      "cwd": "${workspaceRoot}/packages/bot",
+      "env": {
+      },
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run-script", "dev"]
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Debug api",
+      "cwd": "${workspaceRoot}/packages/api",
+      "env": {
+      },
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run-script", "dev"]
+    }
+  ]
+}

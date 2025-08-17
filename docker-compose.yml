@@ -1,0 +1,24 @@
+services:
+  #   bot:
+  #     container_name: bot
+  #     build:
+  #       context: ./
+  #       dockerfile: dockerfile.bot
+  #     volumes:
+  #       - .:/app
+  #         - /app/packages/bot/dist
+  #     working_dir: /app
+  #     command: npm run start:bot #sleep infinity
+
+  # api:
+  #   container_name: api
+  #   build:
+  #     context: ./
+  #     dockerfile: dockerfile.api
+  #   volumes:
+  #     - .:/app
+  #       - /app/packages/api/dist
+  #   ports:
+  #     - "3000:3000"
+  #   working_dir: /app
+  #   command: npm run start:api

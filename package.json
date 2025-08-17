@@ -1,0 +1,24 @@
+{
+  "name": "root",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "docker compose build --no-cache && docker compose up --build -d",
+    "start:bot": "cd packages/bot && npm run start",
+    "start:api": "cd packages/api && npm run start",
+    "start:frontend": "cd packages/frontend && npm run start"
+  },
+  "devDependencies": {
+    "@types/jest": "^30.0.0",
+    "lerna": "^8.2.2",
+    "sequelize-cli": "^6.6.3"
+  },
+  "dependencies": {
+    "@types/sequelize": "^4.28.20",
+    "next-auth": "^4.24.11",
+    "pg": "^8.16.3",
+    "sequelize": "^6.37.7"
+  }
+}
