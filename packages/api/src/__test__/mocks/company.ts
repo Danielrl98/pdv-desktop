@@ -1,4 +1,4 @@
-import { ICompany } from '../../domain/schema/company';
+import { ICompany } from '../../domain/schema';
 
 export const companyMocks: ICompany[] = [
   {

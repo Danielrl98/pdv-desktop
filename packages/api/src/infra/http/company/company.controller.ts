@@ -1,6 +1,6 @@
 import { Body, Controller, Get, Post, Query } from '@nestjs/common';
 import { CompanyService } from './company.service';
-import { ICompany } from '../../../domain/schema/company';
+import { ICompany } from '../../../domain/schema';
 import { Logger } from '../../../domain/libs';
 import { getConfigEnv } from '../../../infra/config';
 

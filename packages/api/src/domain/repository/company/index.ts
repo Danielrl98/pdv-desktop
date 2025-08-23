@@ -1,5 +1,5 @@
 import { DataSource } from 'typeorm';
-import { Company, ICompany } from '../../schema/company';
+import { Company, ICompany } from '../../schema';
 import { v4 as uuidv4 } from 'uuid';
 
 export class CompanyRepository {
@@ -52,5 +52,15 @@ export class CompanyRepository {
       pageSize: limit,
       totalPages: Math.ceil(total / limit),
     };
+  }
+
+  async findOne(filter: Partial<ICompany>) {
+    const find = await this.repository.findOne({
+      where: {
+        ...filter,
+      },
+    });
+
+    return find;
   }
 }

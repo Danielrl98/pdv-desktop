@@ -1,0 +1,55 @@
+[Signup] [2025-08-23T15:58:43.967Z] Usuário já existe[Signup] [2025-08-23T15:58:46.454Z] Usuário já existe[Signin] [2025-08-23T16:32:47.257Z] [
+  {
+    "expected": "string",
+    "code": "invalid_type",
+    "path": [
+      "nome_empresa"
+    ],
+    "message": "Invalid input: expected string, received undefined"
+  },
+  {
+    "expected": "string",
+    "code": "invalid_type",
+    "path": [
+      "documento_empresa"
+    ],
+    "message": "Invalid input: expected string, received undefined"
+  },
+  {
+    "expected": "string",
+    "code": "invalid_type",
+    "path": [
+      "senha"
+    ],
+    "message": "Invalid input: expected string, received undefined"
+  },
+  {
+    "expected": "boolean",
+    "code": "invalid_type",
+    "path": [
+      "debug"
+    ],
+    "message": "Invalid input: expected boolean, received undefined"
+  }
+][Signin] [2025-08-23T16:33:14.681Z] [
+  {
+    "expected": "string",
+    "code": "invalid_type",
+    "path": [
+      "senha"
+    ],
+    "message": "Invalid input: expected string, received undefined"
+  }
+][Signin] [2025-08-23T16:41:12.160Z] [
+  {
+    "origin": "string",
+    "code": "too_big",
+    "maximum": 6,
+    "inclusive": true,
+    "exact": true,
+    "path": [
+      "senha"
+    ],
+    "message": "Too big: expected string to have <=6 characters"
+  }
+]

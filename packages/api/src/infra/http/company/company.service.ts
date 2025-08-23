@@ -1,13 +1,15 @@
 import { Injectable } from '@nestjs/common';
 import { repositories } from '../../../domain/repository';
-import { ICompany } from 'src/domain/schema/company';
+import { ICompany } from 'src/domain/schema';
 
 @Injectable()
 export class CompanyService {
   constructor() {}
 
   async create(company: ICompany) {
-    const res = (await repositories.getRepository()).company.create(company);
+    const res = (await repositories.getRepositoryPostgres()).company.create(
+      company,
+    );
     return res;
   }
 
@@ -21,7 +23,7 @@ export class CompanyService {
       pageSize: 10,
     },
   ) {
-    const res = (await repositories.getRepository()).company.findMany(
+    const res = (await repositories.getRepositoryPostgres()).company.findMany(
       filter,
       pagination,
     );

@@ -1,2 +1,1 @@
-export * from './config/sqlite';
-
+export * from './config/pdv';
