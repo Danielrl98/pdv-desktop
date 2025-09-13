@@ -5,7 +5,7 @@ import { INestApplicationContext } from '@nestjs/common';
 
 let appContext: INestApplicationContext;
 
-export async function initSDK() {
+async function initSDK() {
   if (!appContext) {
     appContext = await NestFactory.createApplicationContext(AppModule);
   }

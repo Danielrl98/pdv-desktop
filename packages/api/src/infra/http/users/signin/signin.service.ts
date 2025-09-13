@@ -11,7 +11,7 @@ export class SigninService {
   private jwt = new JWT();
   constructor() {}
 
-  async signin(body: ISignin, logger: Logger) {
+  async signin(body: ISignin, logger: Logger = new Logger()) {
     const getRepository = await repositories.getRepositoryPostgres();
 
     const findUser = await getRepository.users.findOne({
