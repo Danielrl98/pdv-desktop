@@ -2,12 +2,12 @@ import { Configuration } from 'webpack';
 import path from 'path';
 
 const configuration: Configuration = {
-  target: 'electron-main',
+  target: 'electron-renderer',
 
   module: {
     rules: [
       {
-        test: /\.ts$/,
+        test: /\.tsx?$/,
         use: 'ts-loader',
         exclude: /node_modules/,
       },
@@ -15,7 +15,7 @@ const configuration: Configuration = {
   },
 
   resolve: {
-    extensions: ['.ts', '.js'],
+    extensions: ['.ts', '.tsx', '.js', '.jsx'],
     alias: {
       '@': path.resolve(__dirname, '../../src'),
       '@backend': path.resolve(__dirname, '../../backend'),

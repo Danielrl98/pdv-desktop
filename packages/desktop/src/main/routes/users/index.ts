@@ -1,5 +1,4 @@
- import { IpcMainInvokeEvent } from 'electron';
-import { services } from '../../shared/libs/sdk';
+import { IpcMainInvokeEvent } from 'electron';
 
 class UserRouter {
   constructor() {}
@@ -8,17 +7,13 @@ class UserRouter {
     event: IpcMainInvokeEvent,
     message: { email: string; password: string },
   ) {
-    return { status: 200 };
-    const { users } = await services.users();
+    try {
+      console.log('Login attempt:', message);
+      return { success: true, message: 'Login realizado com sucesso' };
+    } catch (error) {
+      console.error('Erro no login:', error);
 
-    const response = await users.signin({
-      email: message.email,
-      senha: message.password,
-    });
-
-    return {
-      ...message,
-    };
+    }
   }
 }
 

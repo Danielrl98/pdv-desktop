@@ -1,7 +1,7 @@
 import chalk from 'chalk';
 import detectPort from 'detect-port';
 
-const port = process.env.PORT || '1212';
+const port = process.env.PORT || '1214';
 
 detectPort(port, (_err, availablePort) => {
   if (port !== String(availablePort)) {
@@ -11,6 +11,7 @@ detectPort(port, (_err, availablePort) => {
       ),
     );
   } else {
-    process.exit(0);
+    console.log('parou', _err);
+    // process.exit(0);
   }
 });

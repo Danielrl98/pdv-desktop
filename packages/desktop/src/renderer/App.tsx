@@ -1,16 +1,11 @@
-import { MemoryRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
-import './App.css';
-import Login from './pages/Login';
-import Register from './pages/Register';
-
 export default function App() {
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Navigate to="/login" replace />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<Register />} />
-      </Routes>
-    </Router>
+    <div style={{ padding: '20px', fontFamily: 'Arial, sans-serif' }}>
+      <h1>🚀 Electron + React</h1>
+      <p>Aplicação funcionando!</p>
+      <button onClick={() => console.log('Botão clicado!')}>
+        Testar Console
+      </button>
+    </div>
   );
 }

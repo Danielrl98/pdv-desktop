@@ -1,4 +1,4 @@
-import { connectdbPostgres } from 'src/infra/db/config/users';
+import {  connectdbSqlite } from '../../infra/db';
 import { CompanyRepository } from './company';
 import { UserRepository } from './users';
 
@@ -9,7 +9,7 @@ export interface IRepositories {
 
 class Repositories {
   async getRepositoryPostgres(): Promise<IRepositories> {
-    const connect = await connectdbPostgres;
+    const connect = await connectdbSqlite;
 
     return {
       company: new CompanyRepository(connect),

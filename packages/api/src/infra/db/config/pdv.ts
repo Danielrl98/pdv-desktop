@@ -5,6 +5,6 @@ import { configs } from './config';
 
 const DataSourceApp = new DataSource(configs.sqlite as DataSourceOptions);
 
-export const connectdb = DataSourceApp.initialize().then(
+export const connectdbSqlite = DataSourceApp.initialize().then(
   (connection) => connection,
 );
